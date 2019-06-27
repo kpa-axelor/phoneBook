@@ -1,0 +1,30 @@
+plugins{
+ id 'java'
+ id 'war'
+ id 'eclipse'
+}
+
+repositories{
+ jcenter()
+}
+dependencies{
+
+
+ testCompile 'junit:junit:4.12'
+
+ compile 'com.google.inject:guice:4.2.2'
+ compile 'com.google.inject.extensions:guice-servlet:4.2.2'
+ compile 'com.google.inject.extensions:guice-persist:4.2.2'
+
+ compile 'org.jboss.resteasy:resteasy-jaxrs:3.6.0.Final'
+ compile 'org.jboss.resteasy:resteasy-guice:3.6.0.Final'
+
+ compile 'org.hibernate:hibernate-core:5.4.3.Final'
+ compile 'org.postgresql:postgresql:42.2.5'
+
+ compile group: 'org.jboss.resteasy', name: 'resteasy-html', version: '2.3.2.Final'
+
+ compile group: 'org.jboss.resteasy', name: 'resteasy-html', version: '4.0.0.Final'
+ 
+ providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+}

@@ -13,7 +13,6 @@
 		phoneId : <input type="text" name="phoneId"  value = <%= request.getParameter("phoneId") %> ></br>
 		PhoneNumber <input	type="text" name="phoneNumber"  value = <%= request.getParameter("phoneNumber") %> /> </br> 
 		<input type="submit" value="Save" name="Save" />
-		<input type="submit" value="Delete" name="Delete" />
 	</form>
 </body>
 </html>

@@ -3,7 +3,9 @@ package com.axelor.db;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -14,7 +16,7 @@ public class Contact {
 	@GeneratedValue
 	int id;
 	String name;
-	@OneToMany(mappedBy = "contact")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "contact" ,cascade  = CascadeType.ALL)
 	List<Phone> phoneList = new ArrayList<Phone>();
 
 	public Contact(String name) {

@@ -42,14 +42,10 @@ table, th, td {
 			<td> <input type="text" value = "<% out.print(phone.getPhoneNumber()); %>"  name = "phoneNumber"/> </td>
 			<td> <input type="text" value = "<% out.print(phone.getType()); %>" name = "phoneType"/> </td>	
 			<td><input type="submit" value = "Edit" name ="edit" >
-			<td><a name="contactId" href = "<%=request.getContextPath()%>/ContactResource/phonedelete/<%=phone.getId()%> ">phoneDelete</a></td>
-			<td><a name="contactId" href = "<%=request.getContextPath()%>/ContactResource/contactdelete/<%=contact.getId()%> ">Contactdelete</a></td>
-					
+			<td><a name="phoneId" href = "<%=request.getContextPath()%>/ContactResource/phonedelete/<%=phone.getId()%>">phoneDelete</a></td>
+			<td><a name="contactId" href = "<%=request.getContextPath()%>/ContactResource/contactdelete/<%=contact.getId()%> ">Contactdelete</a></td>	
 				</form>
-			
-		<% } %>
-			<tr>	
-			</tr>
+		    <% } %>
 			<%} %>
 </table>
 </body>

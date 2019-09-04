@@ -27,7 +27,6 @@ public class ContactResource {
 	public void insert(@Context HttpServletResponse response, @Context HttpServletRequest request,
 			@FormParam("name") String name, @FormParam("phoneNumber") String[] phoneNumber,
 			@FormParam("type") String[] type) throws ServletException, IOException {
-
 		contactService.insert(name, phoneNumber, type);
 		response.sendRedirect(request.getContextPath() + "/ContactResource/showAll");
 	}
@@ -66,7 +65,7 @@ public class ContactResource {
 	@Path("/showAll")
 	public void showAll(@Context HttpServletResponse response, @Context HttpServletRequest request)
 			throws ServletException, IOException {
-		System.out.println("helllllooooo");
+		System.out.println("show all");
 		List<Contact> contactList = new ArrayList<Contact>();
 		contactList = contactService.readAllContacts();
 		request.setAttribute("contactList", contactList);

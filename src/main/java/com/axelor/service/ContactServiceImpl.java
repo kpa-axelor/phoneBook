@@ -66,6 +66,7 @@ public class ContactServiceImpl implements ContactService {
 	public void deletePhone(int phoneId) {
 		entityManager = entityManagerProvider.get();
 		Phone phone = entityManager.find(Phone.class, phoneId);
+		phone.setContact(null);
 		entityManager.remove(phone);
 	}
 
